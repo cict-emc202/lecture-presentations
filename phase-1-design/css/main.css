@@ -1,0 +1,27 @@
+.profile{
+    width: 70px;
+    height: 70px;
+    border-radius: 70px;
+    margin:  0 auto
+}
+
+.profile-text{
+    line-height: 70px!important;
+    vertical-align: middle;
+    margin: 1rem;
+    font-size: 20px!important;
+}
+
+.black-bg {
+    background-color: black;
+    padding: 1rem;
+}
+
+.img-description{
+   position: absolute;
+   bottom: -1000%;   
+}
+
+.left{
+    text-align: left;
+}
