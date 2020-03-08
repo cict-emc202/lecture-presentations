@@ -1,0 +1,426 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+
+  <title>Game Development Intro</title>
+
+  <meta name="description" content="Presentation made with reveal.js">
+  <meta name="author" content="Mark Joseph J. Solidarios">
+
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+  <!-- Other Styles -->
+  <link rel="stylesheet" href="css/open-sans-fontface/open-sans.css">
+  <link rel="stylesheet" href="css/font-awesome.css">
+  <link rel="stylesheet" href="css/bootstrap.css">
+
+  <link rel="stylesheet" href="css/reveal.min.css">
+  <link rel="stylesheet" href="css/theme/black.min.css" id="theme">
+
+  <!-- Code syntax highlighting -->
+  <link rel="stylesheet" href="lib/css/zenburn.css">
+
+  <!-- Custom style -->
+  <link rel="stylesheet" href="css/master.css">
+
+
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+    document.getElementsByTagName('head')[0].appendChild(link);
+  </script>
+
+  <!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+</head>
+
+<body>
+
+  <div class="reveal">
+
+    <!-- Any section element inside of this container is displayed as a slide -->
+    <div class="slides">
+      <section data-background="assets/bg0.jpg">
+        <h1>Game Development</h1>
+        <p>
+          An Introduction
+        </p>
+        <p>
+          <small>Mark Joseph J. Solidarios</small>
+        </p>
+        <p>
+          <a href="mailto: mjsolidarios@wvsu.edu.ph">
+            <i class="fa glyphicon glyphicon-envelope"></i>
+          </a>
+          <a href="https://github.com/mjsolidarios">
+            <i class="fa fa-github"></i>
+          </a>
+          <a href="https://www.facebook.com/markusjosesolid">
+            <i class="fa fa-facebook"></i>
+          </a>
+          <a href="https://www.twitter.com/markusjosesolid">
+            <i class="fa fa-twitter"></i>
+          </a>
+          <a href="https://www.google.com/+MarkJosephSolidarios">
+            <i class="fa fa-google-plus"></i>
+          </a>
+        </p>
+      </section>
+      <section data-background="assets/bg0.jpg" class="left">
+              <img src="assets/nav.svg" alt="" class="icon-md"/>
+              <p><small>
+                <i class="glyphicon glyphicon-info-sign"></i> Use the navigation buttons or the arrow keys to proceed to the remaining slides.
+              </small></p>
+        <h2>F</h2>
+        <p>
+          <small>
+            <i class="glyphicon glyphicon-info-sign"></i> You can also press
+            <span class="highlight">&gt;</span>
+            <span class="highlight">&gt;</span>F
+            <span class="highlight">&lt;</span>
+            <span class="highlight">&lt;</span> on your keyboard to show your presentation in fullscreen mode.
+          </small>
+        </p>
+        <img src="assets/explore.svg" class="icon-md" alt="" />
+        <p>
+          <small>
+            <i class="glyphicon glyphicon-info-sign"></i> This presentation is best explored with up-to-date web browsers.
+          </small>
+        </p>
+      </section>
+      <section>
+        <p>What is the difference?</p>
+        <img src="assets/sgm.svg" alt="">
+      </section>
+      <section>
+        <section data-background="#009688">
+          <h2 style="color:#FFF">Typical Game Structure</h2>
+        </section>
+        <section>
+            <p>A typical game includes...</p>
+            <ul>
+              <li>Start up</li>
+              <li>Introductory Movie</li>
+              <li>Front End
+                <ul>
+                  <li>Game options</li>
+                  <li>Sound Options</li>
+                  <li>Video Options</li>
+                </ul>
+              </li>
+            </ul>
+            <p><img src="assets/down-arrow-blue.svg" alt=""></p>
+        </section>
+        <section>
+          <ul>
+            <li>Loading Screen</li>
+            <li>Main Game
+              <ul>
+                <li>Introduction</li>
+                <li>Gameplay
+                  <ul>
+                    <li>Game Modes</li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <p><img src="assets/down-arrow-blue.svg" alt=""></p>
+        </section>
+        <section>
+          <ul>
+            <li>Pause Options</li>
+            <li>End Game Movie</li>
+            <li>Credits</li>
+            <li>Shutdown</li>
+          </ul>
+        </section>
+      </section>
+      <section style="text-align:left">
+        <h2>Common Game Components</h2>
+        <ul>
+          <li>Graphics</li>
+          <li>Input</li>
+          <li>Audio</li>
+          <li>Game Logic</li>
+        </ul>
+      </section>
+      <section>
+        <h2>The Game Loop</h2>
+        <pre><code data-trim>
+while gameIsRunning:
+  ProcessInput()
+  UpdateGameWorld()
+  Render()
+        </code></pre>
+        <p><small>* Game loop expressed in Python</small></p>
+      </section>
+      <section>
+        <h2>Game Development Phases</h2>
+        <img src="assets/gamedev_phases.svg" alt="">
+      </section>
+      <section>
+        <img src="assets/dino.png" class="img-sm" alt="">
+        <p><small>The three phases in game development</small></p>
+        <h2><span class="highlight fragment">Design</span><span class="fragment"> | </span><span class="highlight fragment">Create</span><span class="fragment"> | </span><span class="highlight fragment">Build</span></h2>
+      </section>
+      <section>
+        <section data-background="#7B1FA2">
+          <img src="assets/design.svg" alt="" />
+          <h2>Design</h2>
+          <p class="fragment">Define your game.</p>
+          <p><small class="light-purple">Please press the Down Arrow key to continue.</small></p>
+        </section>
+        <section class="left" data-background="#FEFEFE">
+          <p>The game design phase covers many areas and sets the groundwork for the rest of the game making process.</p>
+        </section>
+        <section data-background="#FEFEFE">
+          <video src="assets/design_page_pigeon.mp4" autoplay poster="posterimage.jpg" loop>
+          </video>
+          <p><small class="gray">source: http://www.autodesk.com/campaigns/makegames/design</small></p>
+        </section>
+        <section data-background="#FEFEFE">
+          <img src="assets/8.jpg" class="img-md" alt="">
+          <p><small class="gray">source: https://bethesda.net</small></p>
+        </section>
+        <section data-background="#FEFEFE">
+          <img src="assets/the_art_of_blizzard_1.jpg" class="img-md" alt="">
+          <p><small class="gray">source: http://starcraft2.4fansites.de</small></p>
+        </section>
+        <section>
+<iframe width="579" height="329" src="https://www.youtube.com/embed/Hr7OPBxh5_o" frameborder="0" allowfullscreen></iframe>
+          <p><small class="gray">Krita Painting Software Demo</small></p>
+        </section>
+        <section class="left" data-background="#FEFEFE">
+          <p>You can start by writing down and organizing all of your ideas in the Game Design Document (GDD).</p>
+        </section>
+        <section>
+          <img src="assets/design_doc.svg" alt="" />
+          <p>So what is exactly <br>a GDD?</p>
+        </section>
+        <section class="left">
+          <p>The GDD is a living design document created by the development team as result of collaboration between their designers, artists and programmers.</p>
+          <p>It does&apos;t have a general format but the GDD may contain things like... </p>
+        </section>
+        <section class="left">
+          <ul>
+            <li class="fragment">Game&apos;s story</li>
+            <li class="fragment">Concept art</li>
+            <li class="fragment">Gameplay mechanics</li>
+            <li class="fragment">Assets list to build</li>
+            <li class="fragment">Development schedule</li>
+            <li class="fragment">Development tools</li>
+          </ul>
+          <p class="fragment"><small>*You also need to make concept art for your characters and environments so you know how you want things to look, and to share with your team.</small></p>
+        </section>
+        <section class="left">
+          <h2>Game&apos;s story</h2>
+          <p>Tell the story of your game. It might be simple or highly complex, but knowing your story will guide many other design decisions.</p>
+        </section>
+        <section class="left">
+          <h2>Concept art</h2>
+          <p>Create concept art to visually establish and communicate the look and feel of your game, so artists can build it and give it life. </p>
+        </section>
+        <section class="left">
+          <h2>Gameplay mechanics</h2>
+          <p>How will your player and your game elements interact? </p>
+        </section>
+        <section class="left">
+          <h2>Assets list</h2>
+          <p>What are the stuffs that you need for your game? Put &apos;em on a list.</p>
+        </section>
+        <section class="left">
+          <h2>Development schedule</h2>
+          <p>Put your game development tasks on schedule.</p>
+        </section>
+        <section class="left">
+          <h2>Development tools</h2>
+          <img src="assets/tools_framework.png" class="img-md" alt="">
+          <p>List the software tools or frameworks that will help you bring all your characters and environments together, layout your levels, and build great gameplay. </p>
+        </section>
+      </section>
+    <section>
+      <section data-background="#4CAF50">
+        <img src="assets/create.svg" alt="" />
+        <h2 style="color:#fff" >Create</h2>
+        <p style="color:#fff" class="fragment">Bring it to life.</p>
+      </section>
+      <section class="left">
+        <img src="assets/tools_2d_3d.png" alt="" />
+        <p>
+           From your concept art and model sheets, use 2D &amp; 3D tools to bring your character to life.
+        </p>
+      </section>
+      <section>
+        <p>The create phase picks up <br>where the design phase left off. </p>
+      </section>
+      <section>
+        <p class="left">First, design &amp; create your characters and animate it before bringing it into your game engine. </p>
+        <img src="assets/create_transformation.png" alt="" class="img-md" />
+        <p><small class="gray">source: http://www.autodesk.com/indie-game-maker/home</small></p>
+      </section>
+      <section data-background="#FEFEFE">
+        <video src="assets/weasel-reversed-1000x1000.mp4" autoplay loop class="vid-md"></video>
+        <p><small class="gray">source: http://www.autodesk.com/indie-game-maker/home</small></p>
+      </section>
+      <section data-background="#FEFEFE">
+        <img src="assets/cmprev.jpg" alt="">
+        <p><small class="gray">source: Steam Workshop</small></p>
+      </section>
+      <section>
+        <img class="img-sm" src="assets/rDSabRb.gif" alt="" />
+        <p><small class="gray">source: Superpowers Game Engine</small></p>
+      </section>
+      <section data-background="#FEFEFE">
+        <video src="assets/create_page_koala_2.mp4" autoplay loop class="vid-md"></video>
+        <p><small class="gray">source: http://www.autodesk.com/indie-game-maker/home</small></p>
+      </section>
+    </section>
+  <section>
+    <section data-background="#FF5722">
+      <img src="assets/build.svg" alt="" />
+      <h2 style="color:#FFF">Build</h2>
+      <p style="color:#FFF"class="fragment">Assemble 'em up.</p>
+    </section>
+    <section>
+      <p class="left">The build phase is where you start putting together everything you’ve created so far.</p>
+    </section>
+    <section>
+      <p class="left">This is where you import all your game assets into the game engine, lay out levels, script gameplay, and optimize performance.</p>
+    </section>
+    <section data-background="#FEFEFE">
+      <p class="left"><span>It&apos;s important to keep testing the game as you build it, to make sure it’s fun to play.</span>
+      <span class="fragment"> Ask people you trust to test your game and give you feedback. </span>
+      <span class="fragment">The ultimate goal is to make a fun experience that can be shared with other players.</span></p>
+    </section>
+    <section data-background="#FEFEFE">
+      <video src="assets/build_page_fight.mp4" autoplay loop>
+      </video>
+      <p><small class="gray">source: http://www.autodesk.com/campaigns/makegames/build</small></p>
+    </section>
+    <section class="left">
+      <p>This is also the phase where you assemble your graphic assets and UI.</p>
+      <img src="assets/overlap2d.png" alt="">
+      <p><small>Overlap2D Demo</small></p>
+    </section>
+    <section data-background="#4CAF50">
+      <p style="color:#FFF">Let&apos;s check some game engine reels.</p>
+    </section>
+    <section class="left">
+      <p>The build phase have four sub-processes...</p>
+    </section>
+    <section class="left">
+      <img src="assets/assemble.svg" alt="">
+      <h2>Assemble</h2>
+      <p>Bring all the basic building blocks you’ve made into your game engine, so you can start making your game. </p>
+    </section>
+    <section>
+      <img src="assets/unity-3d-linux.jpg" class="img-md" alt="" />
+      <p><small class="gray">source: http://www.omgubuntu.co.uk/2015/08/unity3d-linux-build</small></p>
+    </section>
+    <section>
+      <img src="assets/godotui.png" class="img-md" alt="" />
+      <p><small class="gray">source: http://www.godotengine.org/projects/godot-engine</small></p>
+    </section>
+    <section>
+      <img src="assets/ue4.jpg" class="img-md" alt="" />
+      <p><small class="gray">source: Live Engine Screenshot</small></p>
+    </section>
+    <section class="left">
+      <img src="assets/levels.svg" alt="" />
+      <h2>Build levels</h2>
+      <p>Build your game levels by putting together the pieces you’ve made to create a vibrant and engaging game world. </p>
+    </section>
+    <section>
+      <img src="assets/level0.jpg" class="img-md" alt="">
+      <p><small class="gray">source: s.cghub.com</small></p>
+    </section>
+    <section>
+      <img src="assets/level1.jpg" class="img-md" alt="">
+      <p><small class="gray">source: huaban.com</small></p>
+    </section>
+    <section>
+      <img src="assets/level2.jpg" class="img-md" alt="">
+      <p><small class="gray">source: vg247.com</small></p>
+    </section>
+    <section>
+      <img src="assets/hi_res_EffectsShowcaseShots_04.jpg" class="img-md" alt="">
+      <p><small class="gray">source: unrealengine.com</small></p>
+    </section>
+    <section class="left">
+      <img src="assets/script.svg" alt="" />
+      <h2>Script gameplay </h2>
+      <p>Bring your game to life by defining puzzles, interactions, and unique gameplay sequences that turn basic levels into real fun. </p>
+    </section>
+    <section class="left">
+      <img src="assets/optimize.svg" alt="" />
+      <h2>Optimize and test</h2>
+      <p>Play-test your game to make sure it&apos;s fun—and to find out what’s broken. Then, optimize the game to make sure it runs smoothly on all platforms. </p>
+    </section>
+  </section>
+      <section>
+        <h2>Game Development Milestones</h2>
+        <img src="assets/milestones.svg" alt="">
+      </section>
+      <section>
+        <h2>Job Titles</h2>
+        <hr>
+        <img src="assets/job_titles.svg" alt="">
+      </section>
+      <section>
+        <h2>Thank You!</h2>
+        <p>
+          <small>This presentation is made of <i class="fa glyphicon glyphicon-heart"></i> and <strong>HTML 5</strong></small>
+        </p>
+      </section>
+    </div>
+
+  </div>
+  <script src="lib/js/head.min.js"></script>
+  <script src="js/reveal.js"></script>
+
+  <script>
+    // Full list of configuration options available at:
+    // https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+      controls: true,
+      progress: true,
+      history: true,
+      center: true,
+
+      transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+      // Optional reveal.js plugins
+      dependencies: [{
+        src: 'lib/js/classList.js',
+        condition: function() {
+          return !document.body.classList;
+        }
+      }, {
+        src: 'plugin/highlight/highlight.js',
+        async: true,
+        condition: function() {
+          return !!document.querySelector('pre code');
+        },
+        callback: function() {
+          hljs.initHighlightingOnLoad();
+        }
+      }, {
+        src: 'plugin/zoom-js/zoom.js',
+        async: true
+      }]
+    });
+  </script>
+
+</body>
+
+</html>
