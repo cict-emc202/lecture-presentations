@@ -11,22 +11,18 @@
         * {
             font-family: Arial, Helvetica, sans-serif;
         }
-
-        .grid-item {
-            width: 20%;
-        }
     </style>
 </head>
 
-<body class="p-20 bg-gray-100">
-    <img class="w-20 mb-8" src="assets/logo.png" alt="Logo">
-    <h1 class="text-xl">Lecture Contents</h1>
-    <hr />
-    <div class="container p-8">
-        <div class="grid" data-masonry='{ "itemSelector": ".grid-item"}'>
-            <div class="rounded overflow-hidden shadow-lg bg-white grid-item m-4">
+<body class="p-4 md:p-20 bg-gray-100">
+    <img class="w-16 md:w-20 mb-4 md:mb-8" src="assets/logo.png" alt="Logo">
+    <h1 class="text-lg md:text-xl">Lecture Contents</h1>
+    <hr class="my-4" />
+    <div class="container mx-auto p-4 md:p-8">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div class="rounded overflow-hidden shadow-lg bg-white p-4">
                 <div class="px-6 py-4">
-                    <div class="font-bold text-xl mb-2">01 GameDev Intro</div>
+                    <div class="font-bold text-lg md:text-xl mb-2">01 GameDev Intro</div>
                     <p class="text-gray-700 text-base">
                         An Introduction.
                     </p>
@@ -36,11 +32,11 @@
                         href="gamedev_intro/">Open</a>
                 </div>
             </div>
-            <div class="rounded overflow-hidden shadow-lg bg-white grid-item m-4">
+            <div class="rounded overflow-hidden shadow-lg bg-white p-4">
                 <div class="px-6 py-4">
-                    <div class="font-bold text-xl mb-2">02 Learning Godot</div>
+                    <div class="font-bold text-lg md:text-xl mb-2">02 Learning Godot</div>
                     <p class="text-gray-700 text-base">
-                       2D Game Development.
+                        2D Game Development.
                     </p>
                 </div>
                 <div class="px-6 py-4">
@@ -50,20 +46,20 @@
             </div>
         </div>
     </div>
-    <hr>
-    <div class="container p-8">
-        <div class="rounded overflow-hidden shadow-lg bg-white m-4">
+    <hr class="my-4">
+    <div class="container mx-auto p-4 md:p-8">
+        <div class="rounded overflow-hidden shadow-lg bg-white p-4">
             <div class="px-6 py-4">
-                <h2 class="text-xl mb-2">Midterm Exam Pointers</h2>
-                <ul>
+                <h2 class="text-lg md:text-xl mb-2">Midterm Exam Pointers</h2>
+                <ul class="list-disc list-inside">
                     <li><strong>Coverage:</strong> Game Development Intro &amp; Godot Engine</li>
-                    <li><strong>Specifics:</strong> Development Phases,  Game Engines, &amp; Exercises Recall</li>
+                    <li><strong>Specifics:</strong> Development Phases, Game Engines, &amp; Exercises Recall</li>
                     <li><strong>Type:</strong> Multiple Choices</li>
                 </ul>
-            </div>           
+            </div>
         </div>
     </div>
-    
+
     <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
 </body>
 
